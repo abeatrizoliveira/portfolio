@@ -1,0 +1,30 @@
+@media screen and (min-width: 768px){
+    .nav{
+        width: 100%;
+        height: 10%;
+        padding: 0px 20px 0px 20px;
+        position: fixed;
+        align-items: center;
+        display: flex;
+    }
+
+    .logo{
+        display: block;
+        text-decoration: none;
+        color: var(--default);
+        font-family: monospace;
+        font-size: larger;
+    }
+
+    .mobile-menu{
+        display: none;
+    }
+    
+    .nav-list{
+        flex-direction: row;
+        width: 100%;
+        padding-right: 20px;
+        border-left: none;
+        justify-content: flex-end;
+    }
+}
