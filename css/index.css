@@ -21,6 +21,10 @@
     z-index: 999;
 }
 
+.logo{
+    display: none;
+}
+
 .mobile-menu div{
     width: 32px;
     height: 2px;
@@ -29,9 +33,6 @@
     background: var(--default);
 }
 
-.logo{
-    display: none;
-}
 
 .nav-list{
     border-left: var(--default) 2px solid;

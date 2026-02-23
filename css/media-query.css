@@ -23,6 +23,7 @@
     .nav-list{
         flex-direction: row;
         width: 100%;
+        margin-right: 0%;
         padding-right: 20px;
         border-left: none;
         justify-content: flex-end;
