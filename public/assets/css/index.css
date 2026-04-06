@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #2b2b2b;
+    --txt-transparent: rgba(255,255,255, 0.6);
+    --shadow-color: rgba(0,0,0, 0.5);
+    --txt-color: #fff;
+    --lgt-green: rgb(134, 253, 182);
+    --transition: all .5s;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    height: 100%;
+    background-color: var(--bg-color);
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden; 
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.menu::after{
+    content: "";        
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width:10%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0; 
+    height: 1px;
+    background-color: var(--txt-color);  
+    transition: var(--transition);  
+}
+
+.menu:hover::after{
+    width: 100%;
+}
+
+.menu-trigger{
+    display: none;
+}
+
+.menu-spacer, .menu-icon{ width: 100%;}
+
+.menu-list{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-icon{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.menu-list a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--txt-transparent);
+    transition: var(--transition);
+}
+
+.menu-list a:hover, .menu-list a:focus-visible{
+    transform: translateY(-0.25rem);
+    color: var(--txt-color);
+    font-size: 1rem;
+}
+
+.menu-icon a:hover, .menu-icon a:focus-visible{
+    transform: translateY(-0.25rem);
+    color: var(--txt-color);
+}
+
+.menu-icon a{
+    color: var(--txt-transparent);
+    transition: var(--transition);
+    font-size: 1rem;
+} 
+
+.link1.active, 
+.link2.active, 
+.link3.active{
+    font-weight: 700;
+    color: var(--txt-color);
+}
+
+.scroll-to-top{
+    bottom: -100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: fixed;
+    right: 1rem;
+    background-color: var(--txt-transparent);
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.scroll-to-top.active{
+    bottom: 1rem;
+}
+
+.scroll-to-top:hover{
+    transform: translateY(-0.25rem);
+}
+
+.scroll-to-top svg{
+    color: var(--bg-color);
+}
+
+.theme{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
