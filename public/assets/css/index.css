@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* COnfigurações gerais */
 *{
     margin: 0;
     padding: 0;
@@ -27,11 +28,13 @@ body{
     overflow-x: hidden; 
 }
 
+/* menu */
+
 .menu{
     display: flex;
     width: 100%;
     padding: 30px;
-    position: relative;
+    position: fixed;
     justify-content: center;
     flex-direction: row;
 }
@@ -78,17 +81,17 @@ body{
     text-decoration: none;
     color: var(--txt-transparent);
     transition: var(--transition);
+    font-size: 1rem;
 }
 
 .menu-list a:hover, .menu-list a:focus-visible{
     transform: translateY(-0.25rem);
     color: var(--txt-color);
-    font-size: 1rem;
 }
 
-.menu-icon a:hover, .menu-icon a:focus-visible{
-    transform: translateY(-0.25rem);
-    color: var(--txt-color);
+.menu-list a.active{
+    color: var(--lgt-green);
+    transition: var(--transition);
 }
 
 .menu-icon a{
@@ -97,12 +100,7 @@ body{
     font-size: 1rem;
 } 
 
-.link1.active, 
-.link2.active, 
-.link3.active{
-    font-weight: 700;
-    color: var(--txt-color);
-}
+/* Botão de scroll até o topo */
 
 .scroll-to-top{
     bottom: -100%;
@@ -131,8 +129,7 @@ body{
     color: var(--bg-color);
 }
 
-.theme{
-    border: none;
-    outline: none;
-    background-color: transparent;
+/* Seções */
+section{
+    height: 100vh;
 }
