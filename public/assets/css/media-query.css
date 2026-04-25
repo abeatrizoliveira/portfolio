@@ -14,8 +14,9 @@
         transition: var(--transition);
     }
 
-    .mennu-spacer {
-        display: none;
+    .menu-spacer {
+        display: flex;
+        justify-content: center;
     }
 
     .menu.active {

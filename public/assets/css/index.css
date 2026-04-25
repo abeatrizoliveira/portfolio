@@ -11,22 +11,23 @@
     --transition: all .5s;
 }
 
-[data-theme="light"]{
-    --bg-color: rgb(233, 237, 227);;
-    --txt-transparent: #2b2b2ba8;
+[data-theme="light"] {
+    --bg-color: rgb(224, 229, 215);
+    ;
+    --txt-transparent: #2b2b2bb5;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --txt-color: #2b2b2b;
     --lgt-green: rgb(111, 136, 66);
-    --drk-green: rgb(153, 175, 112);
+    --drk-green: #9aac78;
 }
 
-[data-theme="dark"]{
+[data-theme="dark"] {
     --bg-color: #2b2b2b;
     --txt-transparent: rgba(255, 255, 255, 0.6);
     --shadow-color: rgba(0, 0, 0, 0.5);
     --txt-color: #fff;
     --lgt-green: rgb(186, 215, 133);
-    --drk-green: rgb(75, 78, 69);
+    --drk-green: #808f64;
 }
 
 html {
@@ -62,7 +63,7 @@ header {
     transition: var(--transition);
 }
 
- .menu::after {
+.menu::after {
     content: "";
     position: absolute;
     display: flex;
@@ -74,7 +75,7 @@ header {
     height: 2px;
     background-color: var(--txt-color);
     transition: var(--transition);
-} 
+}
 
 .menu.float {
     transform: translateY(1rem);
@@ -84,12 +85,17 @@ header {
 }
 
 .menu.float:after {
+    width: 0%;
     height: 0;
 }
 
- .menu:hover::after {
+.menu:hover::after {
     width: 100%;
-} 
+}
+
+.menu.float:hover::after {
+    width: 0%;
+}
 
 .menu-trigger {
     display: none;
@@ -144,22 +150,145 @@ header {
     color: var(--txt-color);
 }
 
-.btn-theme{
+.btn-theme {
     border: none;
     background-color: transparent;
+    height: 2rem;
+    width: 2rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: var(--transition);
     color: var(--txt-transparent);
 }
 
-.btn-theme:hover{
+.btn-theme:hover {
     transform: translateY(-0.25rem);
-    color: var(--txt-color);
 }
 
-.btn-theme svg{
-    width: 20px;
-    height: 20px;
+.btn-theme:hover .darkmode_icon,
+.btn-theme:hover .darkmode_icon .ray    
+{
+    background: var(--txt-color);
+}
+
+.darkmode_icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: var(--txt-transparent);
+    transform-origin: center center;
+    transition: var(--transition);
+}
+
+.darkmode_icon::after {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    left: 7px;
+    bottom: 4px;
+    border-radius: 10px;
+    background: var(--bg-color);
+    transform-origin: center center;
+    transition: var(--transition);
+}
+
+.darkmode_icon .ray {
+    position: absolute;
+    left: 4.5px;
+    top: 5.5px;
+    width: 7px;
+    height: 5px;
+    border-radius: 50%;
+    transform-origin: center;
+    transition: var(--transition);
+}
+
+.ray:nth-child(1) {
+    transform: rotate(45deg) translateX(0);
+}
+
+.ray:nth-child(2) {
+    transform: rotate(90deg) translateX(0);
+}
+
+.ray:nth-child(3) {
+    transform: rotate(135deg) translateX(0);
+}
+
+.ray:nth-child(4) {
+    transform: rotate(180deg) translateX(0);
+}
+
+.ray:nth-child(5) {
+    transform: rotate(225deg) translateX(0);
+}
+
+.ray:nth-child(6) {
+    transform: rotate(270deg) translateX(0);
+}
+
+.ray:nth-child(7) {
+    transform: rotate(315deg) translateX(0);
+}
+
+.ray:nth-child(8) {
+    transform: rotate(360deg) translateX(0);
+}
+
+[data-theme="dark"] {
+    & .darkmode_icon {
+        transform: scale(0.6);
+    }
+
+    & .darkmode_icon::after {
+        left: 15px;
+        bottom: 8px;
+        transform: scale(0);
+    }
+
+    & .ray:nth-child(1) {
+        background: var(--txt-transparent);
+        transform: rotate(45deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(2) {
+        background: var(--txt-transparent);
+        transform: rotate(90deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(3) {
+        background: var(--txt-transparent);
+        transform: rotate(135deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(4) {
+        background: var(--txt-transparent);
+        transform: rotate(180deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(5) {
+        background: var(--txt-transparent);
+        transform: rotate(225deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(6) {
+        background: var(--txt-transparent);
+        transform: rotate(270deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(7) {
+        background: var(--txt-transparent);
+        transform: rotate(315deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(8) {
+        background: var(--txt-transparent);
+        transform: rotate(360deg) translateX(-16px);
+    }
 }
 
 /* Botão de scroll até o topo */
@@ -211,7 +340,6 @@ section h1 span {
     color: var(--lgt-green);
 }
 
-
 /* banner */
 .banner {
     margin-top: 4rem;
@@ -226,18 +354,87 @@ section h1 span {
 }
 
 /* Sobre */
-.about-section{
+.about-section {
+    height: 99vh;
     background-color: var(--drk-green);
 }
+
+.about-img div {
+    width: 250px;
+    height: 250px;
+    background-color: var(--txt-color);
+    border-radius: 50%;
+}
+
+.about-content {
+    width: 100%;
+    display: flex;
+}
+
+.about-info {
+    width: 100%;
+    display: flex;
+}
+
+.about-skills {
+    width: 100%;
+    display: flex;
+}
+
+.skills {
+    width: 100%;
+    display: flex;
+}
+
+.about-text,
+.about-img,
+.about-education,
+.about-skills,
+.skills-icons,
+.skills-status {
+    flex: 1;
+    justify-content: center;
+}
+
+.skills-icons {
+    display: flex;
+}
+
+.skills-icons .menores {
+    display: flex;
+}
+
+.skills-icons .skill-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-icons i {
+    color: var(--txt-color);
+    font-size: 2rem;
+}
+
+.skills-icons .skill-icon:nth-child(1),
+.skills-icons .skill-icon:nth-child(2) {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
 
 /* contato */
 .contact-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 99vh;
 }
 
-.icons-texts{
+.icons-texts {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -251,14 +448,14 @@ section h1 span {
     color: var(--txt-color);
 }
 
-.icon-text{
+.icon-text {
     border-bottom: 3px dotted var(--txt-color);
     padding-bottom: 5px;
     transition: var(--transition);
     margin: auto;
 }
 
-.icon-text:hover{
+.icon-text:hover {
     transform: scale(1.1);
 }
 
@@ -279,12 +476,12 @@ section h1 span {
 
 /* Footer */
 
-footer{
+footer {
     padding: 30PX;
     background-color: var(--drk-green);
     width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     text-align: center;
     color: var(--txt-color);
     display: flex;
@@ -292,41 +489,41 @@ footer{
     gap: 10px;
 }
 
-footer p{
+footer p {
     font-weight: 500;
     padding: 10px;
     font-size: large;
 }
 
-footer .hr{
+footer .hr {
     height: 2px;
     margin: auto;
     width: 30%;
     background-color: var(--txt-color);
 }
 
-footer .footer-navigation{
+footer .footer-navigation {
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 10px;
 }
 
-footer .footer-navigation a{
+footer .footer-navigation a {
     color: var(--txt-color);
     text-decoration: none;
     transition: var(--transition);
 }
 
-footer .footer-navigation a:hover{
+footer .footer-navigation a:hover {
     transform: translateY(-0.25rem);
 }
 
-footer .footer-end{
+footer .footer-end {
     font-size: small;
 }
 
-footer .social-btns{
+footer .social-btns {
     display: flex;
     width: 100%;
     gap: 10px;
@@ -334,19 +531,19 @@ footer .social-btns{
     justify-content: center;
 }
 
-footer .social-btns a{
+footer .social-btns a {
     display: inline-block;
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: var(--bg-color);
-    color: var(--txt-color);
+    background-color: var(--txt-color);
+    color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: var(--transition);
 }
 
-footer .social-btns a:hover{
+footer .social-btns a:hover {
     transform: translateY(-0.25rem);
 }
