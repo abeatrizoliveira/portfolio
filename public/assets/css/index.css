@@ -9,10 +9,11 @@
 
 :root {
     --transition: all .5s;
+    --transparent: rgba(255, 255, 255, 0.2);
 }
 
 [data-theme="light"] {
-    --bg-color: rgb(224, 229, 215);
+    --bg-color: rgb(211, 217, 200);
     ;
     --txt-transparent: #2b2b2bb5;
     --shadow-color: rgba(0, 0, 0, 0.5);
@@ -82,6 +83,7 @@ header {
     width: 50%;
     border: 2px solid var(--txt-color);
     border-radius: 30px;
+    z-index: 99;
 }
 
 .menu.float:after {
@@ -168,8 +170,7 @@ header {
 }
 
 .btn-theme:hover .darkmode_icon,
-.btn-theme:hover .darkmode_icon .ray    
-{
+.btn-theme:hover .darkmode_icon .ray {
     background: var(--txt-color);
 }
 
@@ -354,124 +355,267 @@ section h1 span {
 }
 
 /* Sobre */
-.about-section {
-    height: 99vh;
+
+/* Ajuste no Container Principal */
+.about-section .container {
     background-color: var(--drk-green);
+    min-height: 100vh;
+    /* Use min-height para não cortar conteúdo em telas menores */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Espaço entre a parte de cima e a de baixo */
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.about-section h2 {
+    color: var(--bg-color);
+}
+
+/* Parte de Cima: Texto e Foto */
+.about-content {
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente a foto com o texto */
+    gap: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.about-text {
+    flex: 1;
+    /* Dá mais espaço para o texto */
+}
+
+.arrow-img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+}
+
+.line{
+    stroke: var(--bg-color);
+}
+
+.arrow-head{
+    fill: var(--bg-color);
+
+}
+
+.about-text .name{
+    font-size: 2.5rem;
+}
+
+.about-text p {
+    margin-top: 30px;
+    color: var(--txt-color);
+    font-size: 1.15rem;
+    text-align: justify;
+    align-items: center;
+    align-self: center;
+}
+
+.about-text p span {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .about-img div {
-    width: 250px;
-    height: 250px;
-    background-color: var(--txt-color);
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
+    background-color: var(--bg-color);
 }
 
-.about-content {
+.about-img div img{
     width: 100%;
-    display: flex;
 }
 
+
+/* Parte de Baixo: Educação e Habilidades */
 .about-info {
-    width: 100%;
     display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+.about-education {
+    flex: 1;
 }
 
 .about-skills {
-    width: 100%;
-    display: flex;
-}
-
-.skills {
-    width: 100%;
-    display: flex;
-}
-
-.about-text,
-.about-img,
-.about-education,
-.about-skills,
-.skills-icons,
-.skills-status {
     flex: 1;
-    justify-content: center;
 }
 
-.skills-icons {
+.skills-extra{
     display: flex;
+    gap: 15px;
+    margin-top: 30px;
 }
 
-.skills-icons .menores {
-    display: flex;
-}
-
-.skills-icons .skill-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.skills-icons i {
-    color: var(--txt-color);
+.skills-extra i{
+    color: var(--bg-color);
     font-size: 2rem;
 }
 
-.skills-icons .skill-icon:nth-child(1),
-.skills-icons .skill-icon:nth-child(2) {
-    width: 4.5rem;
-    height: 4.5rem;
+/* Ajuste das Skills para não ficarem grudadas */
+.skills {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
-
-/* contato */
-.contact-section {
+.skill {
     display: flex;
+    gap: 20px;
+}
+
+.skill i {
+    font-size: 2rem;
+    color: var(--bg-color);
+}
+
+.skills-status {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-status {
+    width: 100%;
+}
+
+/* Barras de Status */
+.status-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--transparent);
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.status-fill {
+    height: 100%;
+    background-color: var(--txt-color);
+    border-radius: 4px;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 30px;
+    /* Espaço para a linha e as bolinhas */
+    margin-top: 20px;
+}
+
+/* A Linha Vertical */
+.timeline-line {
+    position: absolute;
+    left: 6px;
+    /* Centraliza a linha com a bolinha */
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--transparent);
+    /* Linha transparente */
+    border-radius: 10px;
+}
+
+/* Cada item da lista */
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* A Bolinha */
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    /* Move para cima da linha */
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--bg-color);
+    /* Ou a cor que preferir */
+    border-radius: 50%;
+    border: 3px solid var(--drk-green);
+    /* Bordar da cor do fundo para dar destaque */
+    z-index: 1;
+}
+
+/* Conteúdo do texto */
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content .date {
+    font-weight: bold;
+    color: var(--txt-color);
+    font-size: 1rem;
+}
+
+.timeline-content p {
+    margin: 5px 0 0 0;
+    color: var(--txt-color);
+    /* Ajuste conforme seu contraste */
+    font-size: 1rem;
+}
+
+/* Contato */
+.contact-section {
+    height: 90vh;
+    display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    height: 99vh;
+}
+
+.info-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .icons-texts {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 10px;
-}
-
-.icon-text a {
-    display: flex;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--txt-color);
+    gap: 30px;
 }
 
 .icon-text {
-    border-bottom: 3px dotted var(--txt-color);
-    padding-bottom: 5px;
     transition: var(--transition);
-    margin: auto;
+    cursor: pointer;
+}
+
+.icon-text a {
+    text-decoration: none;
+    color: var(--txt-color);
+    position: relative;
+    font-size: 1.15rem;
+}
+
+.icon-text a::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -5px;
+    border: 2px dashed var(--txt-color);
 }
 
 .icon-text:hover {
     transform: scale(1.1);
-}
-
-.info-contact,
-.form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    height: 100%;
-}
-
-.info-contact {
-    text-align: center;
-    align-items: center;
-    gap: 30px;
 }
 
 /* Footer */

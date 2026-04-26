@@ -70,99 +70,137 @@
             </div>
         </section>
         <section class="about-section" id="about-section">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Beatriz Oliveira</h2>
-                    <span>vulgo Bea</span>
-                    <p>Olá! Sou uma desenvolvedora em formação que ama design, lógica e criatividade. Como full stack,
-                        sempre tento unir esses três para ccriar soluções escalonáveis e responsivas.
-                        Sempre estou tentando aprender. Para mim, cada projeto é uma oportunidade de crescimento.</p>
-                </div>
-                <div class="about-img">
-                    <div></div>
-                </div>
-            </div>
-            <div class="about-info">
-                <div class="about-education">
-                    <h2>Educação</h2>
-                </div>
-                <div class="about-skills">
-                    <h2>Habilidades</h2>
-                    <div class="skills">
-                        <div class="skills-icons">
-                            <div class="skill-icon">
-                                <i class="devicon-python-plain"></i>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="devicon-javascript-plain"></i>
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="name">Beatriz Oliveira</h2>
+                        <p><span>Olá!</span> Sou uma desenvolvedora em formação que ama design, lógica e criatividade.
+                            Como full stack,
+                            sempre tento unir esses três para criar soluções escalonáveis e responsivas.
+                            Sempre estou tentando aprender. Para mim, cada projeto é uma oportunidade de crescimento.
+                        </p>
+                    </div>
+                    <div class="arrow-img">
+                        <svg width="230" height="230">
+                            <defs>
+                                <!-- Define a ponta da seta -->
+                                <marker id="arrow" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto">
+                                    <path d="M0,0 L6,3 L0,6 Z" class="arrow-head" />
+                                </marker>
+                            </defs>
 
+                            <!-- Curva com linha tracejada -->
+                            <path d="M 0 50 Q 100 0 200 60" fill="none" class="line" stroke-width="4"
+                                stroke-dasharray="5,5" marker-end="url(#arrow)" />
+                        </svg>
+                    </div>
+                    <div class="about-img">
+                        <div>
+                            <img src="../assets/img/profile-pic.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-info">
+                    <div class="about-education">
+                        <h2>Educação</h2>
+                        <div class="timeline-container">
+                            <div class="timeline-line"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="date">2026 - Presente</span>
+                                    <p>Tecnólogo em Desenvolvimento de Software Multiplataforma</p>
+                                </div>
                             </div>
-                            <div class="skill-icon">
-                                <i class="devicon-csharp-plain"></i>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="devicon-mysql-plain"></i>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="devicon-postgresql-plain"></i>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="devicon-html5-plain"></i>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="devicon-css3-plain"></i>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="date">2023 - 2025</span>
+                                    <p>Técnico em Desenvolvimento de Sistemas</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="skills-status">
-                            <div class="skill-status">
-                                <span>Python</span>
-                                <div class="status-bar">
-                                    <div class="status-fill" style="width: 60%;"></div>
+                    </div>
+                    <div class="about-skills">
+                        <h2>Habilidades</h2>
+                        <div class="skills">
+                            <div class="skills-status">
+                                <div class="skill">
+                                    <i class="devicon-python-plain"></i>
+                                    <div class="skill-status">
+                                        <span>Python</span>
+                                        <div class="status-bar">
+                                            <div class="status-fill" style="width: 60%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <i class="devicon-javascript-plain"></i>
+                                    <div class="skill-status">
+                                        <span>JavaScript</span>
+                                        <div class="status-bar">
+                                            <div class="status-fill" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <i class="devicon-csharp-plain"></i>
+                                    <div class="skill-status">
+                                        <span>C#</span>
+                                        <div class="status-bar">
+                                            <div class="status-fill" style="width: 40%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <i class="devicon-mysql-plain"></i>
+                                    <div class="skill-status">
+                                        <span>MySQL</span>
+                                        <div class="status-bar">
+                                            <div class="status-fill" style="width: 60%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <i class="devicon-postgresql-plain"></i>
+                                    <div class="skill-status">
+                                        <span>postgreSQL</span>
+                                        <div class="status-bar">
+                                            <div class="status-fill" style="width: 40%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <i class="devicon-html5-plain"></i>
+                                    <div class="skill-status">
+                                        <span>HTML5</span>
+                                        <div class="status-bar">
+                                            <div class="status-fill" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <i class="devicon-css3-plain"></i>
+                                    <div class="skill-status">
+                                        <span>CSS3</span>
+                                        <div class="status-bar">
+                                            <div class="status-fill" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="skill-status">
-                                <span>JavaScript</span>
-                                <div class="status-bar">
-                                    <div class="status-fill" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-status">
-                                <span>C#</span>
-                                <div class="status-bar">
-                                    <div class="status-fill" style="width: 40%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-status">
-                                <span>MySQL</span>
-                                <div class="status-bar">
-                                    <div class="status-fill" style="width: 60%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-status">
-                                <span>postgreSQL</span>
-                                <div class="status-bar">
-                                    <div class="status-fill" style="width: 40%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-status">
-                                <span>HTML5</span>
-                                <div class="status-bar">
-                                    <div class="status-fill" style="width: 100%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-status">
-                                <span>CSS3</span>
-                                <div class="status-bar">
-                                    <div class="status-fill" style="width: 100%;"></div>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="skills-extra">
+                            <i class="devicon-react-plain"></i>
+                            <i class="devicon-git-plain"></i>
+                            <i class="devicon-figma-plain"></i>
+                            <i class="devicon-linux-plain"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="project-section" id="project-section">
-
         </section>
         <section class="contact-section" id="contact-section">
             <div class="info-contact">
