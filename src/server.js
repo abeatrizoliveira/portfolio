@@ -1,7 +1,10 @@
 const path = require("path");
 
 const dotenv = require("dotenv");
-dotenv.config({quiet:true});
+dotenv.config({
+    quiet:true,
+    path: path.resolve(__dirname, "..", ".env")
+});
 
 const express = require("express");
 const app = express();
@@ -12,7 +15,7 @@ app.listen(PORT, function(){
     console.log(`Servidor rodando em: http://localhost:${PORT}`);
 });
 
-const publicPath = path.join(__dirname, "public");
+const publicPath = path.join(__dirname, ".." ,"public");
 const pagesPath = path.join(publicPath, "pages");
 const assetsPath = path.join(publicPath, "assets");
 

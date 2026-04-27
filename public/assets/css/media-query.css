@@ -1,4 +1,4 @@
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
     .menu {
         position: fixed;
         top: 0;
@@ -85,6 +85,49 @@
     .menu-icon {
         flex-direction: column-reverse;
         width: auto;
+    }
+    /* Sobre */
+    .box{
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .arrow-img{
+        top: 40%;
+        transform: rotateZ(130deg);
+    }
+
+    .about-content{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .about-content p{
+        text-align: center;
+    }
+
+    .about-img{
+        align-items: center;
+    }
+
+    .about-img div{
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-info{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills-extra{
+        justify-content: center;
+    }
+
+    .about-info h2{
+        text-align: center;
     }
 
     /* Contato */

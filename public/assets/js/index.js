@@ -71,3 +71,38 @@ themeBtn.addEventListener("click", () => {
 });
 
 currentYear.innerHTML = new Date().getFullYear();
+
+// Animação de aparecer
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".box").forEach((box) => {
+  gsap.fromTo(
+    box,
+    { x: "100%" },
+    {
+      x: 0,
+      scrollTrigger: {
+        trigger: box,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: 1,
+      },
+    },
+  );
+});
+
+// Função para seta diminuir
+const mql = window.matchMedia("(max-width: 768px)");
+
+function handleWidthChange(e) {
+  if (e.matches) {
+    const line = document.querySelector(".line");
+    line.setAttribute("d", "M 120 120 Q 120 0 200 50");
+  }
+}
+
+// roda ao carregar
+handleWidthChange(mql);
+
+// continua ouvindo mudanças
+mql.addEventListener('change', handleWidthChange);
