@@ -360,11 +360,9 @@ section h1 span {
 .about-section .container {
     background-color: var(--drk-green);
     min-height: 100vh;
-    /* Use min-height para não cortar conteúdo em telas menores */
     display: flex;
     flex-direction: column;
     gap: 40px;
-    /* Espaço entre a parte de cima e a de baixo */
     border-radius: 30px;
     padding: 50px;
 }
@@ -377,7 +375,6 @@ section h1 span {
 .about-content {
     display: flex;
     align-items: center;
-    /* Centraliza verticalmente a foto com o texto */
     gap: 50px;
     width: 100%;
     position: relative;
@@ -385,26 +382,25 @@ section h1 span {
 
 .about-text {
     flex: 1;
-    /* Dá mais espaço para o texto */
 }
 
-.arrow-img{
+.arrow-img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 10%;
 }
 
-.line{
+.line {
     stroke: var(--bg-color);
 }
 
-.arrow-head{
+.arrow-head {
     fill: var(--bg-color);
 
 }
 
-.about-text .name{
+.about-text .name {
     font-size: 2.5rem;
 }
 
@@ -435,7 +431,7 @@ section h1 span {
     background-color: var(--bg-color);
 }
 
-.about-img div img{
+.about-img div img {
     width: 100%;
 }
 
@@ -455,13 +451,13 @@ section h1 span {
     flex: 1;
 }
 
-.skills-extra{
+.skills-extra {
     display: flex;
     gap: 15px;
     margin-top: 30px;
 }
 
-.skills-extra i{
+.skills-extra i {
     color: var(--bg-color);
     font-size: 2rem;
 }
@@ -513,7 +509,6 @@ section h1 span {
 .timeline-container {
     position: relative;
     padding-left: 30px;
-    /* Espaço para a linha e as bolinhas */
     margin-top: 20px;
 }
 
@@ -521,12 +516,10 @@ section h1 span {
 .timeline-line {
     position: absolute;
     left: 6px;
-    /* Centraliza a linha com a bolinha */
     top: 0;
     bottom: 0;
     width: 4px;
     background-color: var(--transparent);
-    /* Linha transparente */
     border-radius: 10px;
 }
 
@@ -540,15 +533,12 @@ section h1 span {
 .timeline-dot {
     position: absolute;
     left: -30px;
-    /* Move para cima da linha */
     top: 5px;
     width: 16px;
     height: 16px;
     background-color: var(--bg-color);
-    /* Ou a cor que preferir */
     border-radius: 50%;
     border: 3px solid var(--drk-green);
-    /* Bordar da cor do fundo para dar destaque */
     z-index: 1;
 }
 
@@ -567,7 +557,6 @@ section h1 span {
 .timeline-content p {
     margin: 5px 0 0 0;
     color: var(--txt-color);
-    /* Ajuste conforme seu contraste */
     font-size: 1rem;
 }
 
