@@ -23,7 +23,7 @@
         right: 0;
     }
 
-    .menu.float{
+    .menu.float {
         transform: translateY(0);
         border: none;
         width: 40%;
@@ -86,47 +86,68 @@
         flex-direction: column-reverse;
         width: auto;
     }
+
+    section {
+        padding: 15px;
+        height: 100%;
+    }
+
+    section h1 {
+        font-size: 3rem;
+        color: var(--txt-color);
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        color: var(--txt-color);
+    }
+
     /* Sobre */
-    .box{
+
+    .box {
         display: flex;
         gap: 30px;
         flex-wrap: wrap;
     }
 
-    .arrow-img{
+    .about-text .name{
+        font-size: 2.125rem;
+    }
+
+    .arrow-img {
         top: 40%;
         transform: rotateZ(130deg);
     }
 
-    .about-content{
+    .about-content {
         flex-wrap: wrap;
         text-align: center;
     }
 
-    .about-content p{
+    .about-content p {
         text-align: center;
     }
 
-    .about-img{
+    .about-img {
         align-items: center;
     }
 
-    .about-img div{
+    .about-img div {
         width: 200px;
         height: 200px;
     }
 
-    .about-info{
+    .about-info {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
 
-    .skills-extra{
+    .skills-extra {
         justify-content: center;
     }
 
-    .about-info h2{
+    .about-info h2 {
         text-align: center;
     }
 
@@ -137,5 +158,16 @@
 
     .form-contact {
         width: 80%;
+    }
+
+    .card-wrapper{
+        margin: 0px 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button{
+        display: none;
+    }
+    .not-found{
+        height: 100%;
     }
 }

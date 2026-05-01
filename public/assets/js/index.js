@@ -97,7 +97,7 @@ const mql = window.matchMedia("(max-width: 768px)");
 function handleWidthChange(e) {
   if (e.matches) {
     const line = document.querySelector(".line");
-    line.setAttribute("d", "M 120 120 Q 120 0 200 50");
+    line.setAttribute("d", "M 100 150 Q 70 20 150 50");
   }
 }
 
@@ -106,3 +106,34 @@ handleWidthChange(mql);
 
 // continua ouvindo mudanças
 mql.addEventListener('change', handleWidthChange);
+
+// Swiper JS para carrossel
+new Swiper('.card-wrapper', {
+  loop: true,
+  spaceBetween: 30,
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
+});

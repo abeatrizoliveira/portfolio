@@ -21,3 +21,6 @@ const assetsPath = path.join(publicPath, "assets");
 
 app.use("/", express.static(pagesPath));
 app.use("/assets", express.static(assetsPath));
+app.use(function (_req, res) {
+  res.redirect("404.html");
+});

@@ -365,6 +365,7 @@ section h1 span {
     gap: 40px;
     border-radius: 30px;
     padding: 50px;
+    box-shadow: inset 0px 2px 2px var(--shadow-color);
 }
 
 .about-section h2 {
@@ -560,6 +561,63 @@ section h1 span {
     font-size: 1rem;
 }
 
+/* Projetos */
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+
+.card-list .card-item {
+  list-style: none;
+}
+
+.card-list .card-item .card-link {
+  display: block;
+  background: #fff;
+  padding: 18px;
+  user-select: none;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: inset 0px 2px 2px var(--shadow-color);
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:hover {
+    transform: translateY(-0.25rem);
+}
+
+.card-list .card-link .card-image {
+  width: 100%;
+  border-radius: 10px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+
+.card-list .card-link .card-title {
+  color: #000;
+  font-size: 1.19rem;
+  font-weight: 600;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: var(--drk-green);
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+  color: var(--txt-color);
+  margin-top: -35px;
+}
+
 /* Contato */
 .contact-section {
     height: 90vh;
@@ -678,5 +736,30 @@ footer .social-btns a {
 }
 
 footer .social-btns a:hover {
+    transform: translateY(-0.25rem);
+}
+
+/* 404.html */
+.not-found{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    gap: 20px;
+}
+
+.not-found span{
+    color: var(--lgt-green);
+}
+
+.not-found .btn-back{
+    color: var(--txt-color);
+    transition: var(--transition);
+}
+
+.not-found .btn-back:hover{
     transform: translateY(-0.25rem);
 }
