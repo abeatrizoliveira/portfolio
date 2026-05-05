@@ -65,7 +65,10 @@ sections.forEach((section) => {
 themeBtn.addEventListener("click", () => {
   const html = document.querySelector("html");
   const currentTheme = html.getAttribute("data-theme");
+  const btnTheme = document.querySelector(".btn-theme");
   const newTheme = currentTheme === "dark" ? "light" : "dark";
+  const titleTheme = currentTheme === "dark" ? "Modo Claro" : "Modo Escuro";
+  btnTheme.setAttribute("title", titleTheme);
   html.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
 });
@@ -105,35 +108,50 @@ function handleWidthChange(e) {
 handleWidthChange(mql);
 
 // continua ouvindo mudanças
-mql.addEventListener('change', handleWidthChange);
+mql.addEventListener("change", handleWidthChange);
 
 // Swiper JS para carrossel
-new Swiper('.card-wrapper', {
+new Swiper(".card-wrapper", {
   loop: true,
   spaceBetween: 30,
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true
-    },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-    // Responsive breakpoints
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1024: {
-            slidesPerView: 3
-        }
-    }
+  // Responsive breakpoints
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+// função para o aria-label seguir o mouse
+const skills = document.querySelectorAll(".skill");
+
+skills.forEach((skill) => {
+  skill.addEventListener("mousemove", (e) => {
+    const rect = skill.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    skill.style.setProperty("--mouse-x", x + "px");
+    skill.style.setProperty("--mouse-y", y + "px");
+  });
 });

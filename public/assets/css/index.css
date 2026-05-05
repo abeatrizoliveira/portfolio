@@ -13,8 +13,7 @@
 }
 
 [data-theme="light"] {
-    --bg-color: rgb(211, 217, 200);
-    ;
+    --bg-color: rgb(225, 230, 215);
     --txt-transparent: #2b2b2bb5;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --txt-color: #2b2b2b;
@@ -26,7 +25,7 @@
     --bg-color: #2b2b2b;
     --txt-transparent: rgba(255, 255, 255, 0.6);
     --shadow-color: rgba(0, 0, 0, 0.5);
-    --txt-color: #fff;
+    --txt-color: rgb(225, 230, 215);
     --lgt-green: rgb(186, 215, 133);
     --drk-green: #808f64;
 }
@@ -365,7 +364,6 @@ section h1 span {
     gap: 40px;
     border-radius: 30px;
     padding: 50px;
-    box-shadow: inset 0px 2px 2px var(--shadow-color);
 }
 
 .about-section h2 {
@@ -412,11 +410,11 @@ section h1 span {
     text-align: justify;
     align-items: center;
     align-self: center;
+    text-indent: 15px;
 }
 
-.about-text p span {
-    font-size: 1.3rem;
-    font-weight: 600;
+.about-text p b {
+    font-weight: 500;
 }
 
 .about-img {
@@ -463,7 +461,6 @@ section h1 span {
     font-size: 2rem;
 }
 
-/* Ajuste das Skills para não ficarem grudadas */
 .skills {
     display: flex;
     gap: 20px;
@@ -485,7 +482,33 @@ section h1 span {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+}
+
+.about-section [aria-label] {
+    position: relative;
+}
+
+.about-section [aria-label]::after {
+    content: attr(aria-label);
+    display: none;
+    position: absolute;
+    z-index: 5000;
+    pointer-events: none;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: .9rem;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow-color) 0px 1px 5px;
+    font-family: Roboto;
+}
+
+.about-section [aria-label]:hover::after {
+    display: block;
+    left: calc(var(--mouse-x) - 30px);
+    top: calc(var(--mouse-y) - 30px);
 }
 
 .skill-status {
@@ -513,6 +536,10 @@ section h1 span {
     margin-top: 20px;
 }
 
+.timeline-container.course-timeline {
+    padding-left: 0;
+}
+
 /* A Linha Vertical */
 .timeline-line {
     position: absolute;
@@ -530,6 +557,15 @@ section h1 span {
     margin-bottom: 30px;
 }
 
+.timeline-item.course-item {
+    background-color: var(--txt-color);
+    left: 0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
 /* A Bolinha */
 .timeline-dot {
     position: absolute;
@@ -541,6 +577,17 @@ section h1 span {
     border-radius: 50%;
     border: 3px solid var(--drk-green);
     z-index: 1;
+}
+
+.timeline-dot.course-item {
+    position: relative;
+    left: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.course-icon{
+    width: 5rem;
 }
 
 /* Conteúdo do texto */
@@ -555,6 +602,14 @@ section h1 span {
     font-size: 1rem;
 }
 
+.timeline-content .date.course-item {
+    color: var(--bg-color);
+}
+
+.timeline-content.course-item p{
+    color: var(--bg-color);
+}
+
 .timeline-content p {
     margin: 5px 0 0 0;
     color: var(--txt-color);
@@ -563,25 +618,24 @@ section h1 span {
 
 /* Projetos */
 .card-wrapper {
-  max-width: 1100px;
-  margin: 0 60px 35px;
-  padding: 20px 10px;
-  overflow: hidden;
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
 }
 
 .card-list .card-item {
-  list-style: none;
+    list-style: none;
 }
 
 .card-list .card-item .card-link {
-  display: block;
-  background: #fff;
-  padding: 18px;
-  user-select: none;
-  border-radius: 12px;
-  text-decoration: none;
-  box-shadow: inset 0px 2px 2px var(--shadow-color);
-  transition: 0.2s ease;
+    display: block;
+    background: var(--drk-green);
+    padding: 18px;
+    user-select: none;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
 
 .card-list .card-item .card-link:hover {
@@ -589,33 +643,33 @@ section h1 span {
 }
 
 .card-list .card-link .card-image {
-  width: 100%;
-  border-radius: 10px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 
 .card-list .card-link .card-title {
-  color: #000;
-  font-size: 1.19rem;
-  font-weight: 600;
+    color: #000;
+    font-size: 1.19rem;
+    font-weight: 600;
 }
 
 .card-wrapper .swiper-pagination-bullet {
-  height: 13px;
-  width: 13px;
-  opacity: 0.5;
-  background: var(--drk-green);
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: var(--drk-green);
 }
 
 .card-wrapper .swiper-pagination-bullet-active {
-  opacity: 1;
+    opacity: 1;
 }
 
 .card-wrapper .swiper-slide-button {
-  color: var(--txt-color);
-  margin-top: -35px;
+    color: var(--txt-color);
+    margin-top: -35px;
 }
 
 /* Contato */
@@ -740,7 +794,7 @@ footer .social-btns a:hover {
 }
 
 /* 404.html */
-.not-found{
+.not-found {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -751,15 +805,15 @@ footer .social-btns a:hover {
     gap: 20px;
 }
 
-.not-found span{
+.not-found span {
     color: var(--lgt-green);
 }
 
-.not-found .btn-back{
+.not-found .btn-back {
     color: var(--txt-color);
     transition: var(--transition);
 }
 
-.not-found .btn-back:hover{
+.not-found .btn-back:hover {
     transform: translateY(-0.25rem);
 }

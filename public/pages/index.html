@@ -29,7 +29,7 @@
         </button>
         <nav class="menu" id="menu">
             <div class="menu-spacer">
-                <button type="button" data-theme-toggle class="btn-theme">
+                <button type="button" data-theme-toggle class="btn-theme" title="Modo claro">
                     <div class="darkmode_icon">
                         <span class="ray"></span>
                         <span class="ray"></span>
@@ -79,10 +79,11 @@
                     <div class="about-content">
                         <div class="about-text">
                             <h2 class="name">Beatriz Oliveira</h2>
-                            <p><span>Olá!</span> Sou uma desenvolvedora em formação que ama design, lógica e
+                            <p><b>Olá!</b> Sou uma desenvolvedora em formação que ama design, lógica e
                                 criatividade.
-                                Como full stack,
-                                sempre tento unir esses três para criar soluções escalonáveis e responsivas.
+                                Como <b>full stack</b>,
+                                sempre tento unir esses três para criar soluções escalonáveis e responsivas.</p>
+                            <p>
                                 Sempre estou tentando aprender. Para mim, cada projeto é uma oportunidade de
                                 crescimento.
                             </p>
@@ -109,21 +110,43 @@
                     </div>
                     <div class="about-info">
                         <div class="about-education">
-                            <h2>Educação</h2>
-                            <div class="timeline-container">
-                                <div class="timeline-line"></div>
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <span class="date">2026 - Presente</span>
-                                        <p>Tecnólogo em Desenvolvimento de Software Multiplataforma</p>
+                            <div class="education">
+                                <h2>Educação</h2>
+                                <div class="timeline-container">
+                                    <div class="timeline-line"></div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <span class="date">2026 - Presente</span>
+                                            <p>Tecnólogo em Desenvolvimento de Software Multiplataforma</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <span class="date">2023 - 2025</span>
+                                            <p>Técnico em Desenvolvimento de Sistemas</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <span class="date">2023 - 2025</span>
-                                        <p>Técnico em Desenvolvimento de Sistemas</p>
+                            </div>
+                            <div class="courses">
+                                <div class="about-education">
+                                    <h2>Cursos e Certificados</h2>
+                                    <div class="timeline-container course-timeline">
+                                        <div class="timeline-item course-item">
+                                                <img src="https://www.cloudcommunications.com/hubfs/Imported_Blog_Media/Cisco-Nov-17-2023-05-38-15-8971-AM.png" alt="Cisco icon" class="course-icon">
+                                            <div class="timeline-content course-item">
+                                                <span class="date course-item">Cisco Networking Academy</span>
+                                                <p>Tecnólogo em Desenvolvimento de Software Multiplataforma</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item course-item">
+                                            <div class="timeline-content course-item">
+                                                <span class="date course-item">TOEIC Brasil </span>
+                                                <p>Técnico em Desenvolvimento de Sistemas</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -136,16 +159,16 @@
                                         <i class="devicon-python-plain"></i>
                                         <div class="skill-status">
                                             <span>Python</span>
-                                            <div class="status-bar">
+                                            <div class="status-bar" aria-label="60%">
                                                 <div class="status-fill" style="width: 60%;"></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>  
                                     <div class="skill">
                                         <i class="devicon-javascript-plain"></i>
                                         <div class="skill-status">
                                             <span>JavaScript</span>
-                                            <div class="status-bar">
+                                            <div class="status-bar" aria-label="80%">
                                                 <div class="status-fill" style="width: 80%;"></div>
                                             </div>
                                         </div>
@@ -154,7 +177,7 @@
                                         <i class="devicon-csharp-plain"></i>
                                         <div class="skill-status">
                                             <span>C#</span>
-                                            <div class="status-bar">
+                                            <div class="status-bar" aria-label="40%">
                                                 <div class="status-fill" style="width: 40%;"></div>
                                             </div>
                                         </div>
@@ -163,7 +186,7 @@
                                         <i class="devicon-mysql-plain"></i>
                                         <div class="skill-status">
                                             <span>MySQL</span>
-                                            <div class="status-bar">
+                                            <div class="status-bar" aria-label="60%">
                                                 <div class="status-fill" style="width: 60%;"></div>
                                             </div>
                                         </div>
@@ -172,7 +195,7 @@
                                         <i class="devicon-postgresql-plain"></i>
                                         <div class="skill-status">
                                             <span>postgreSQL</span>
-                                            <div class="status-bar">
+                                            <div class="status-bar" aria-label="40%">
                                                 <div class="status-fill" style="width: 40%;"></div>
                                             </div>
                                         </div>
@@ -181,7 +204,7 @@
                                         <i class="devicon-html5-plain"></i>
                                         <div class="skill-status">
                                             <span>HTML5</span>
-                                            <div class="status-bar">
+                                            <div class="status-bar" aria-label="100%">
                                                 <div class="status-fill" style="width: 100%;"></div>
                                             </div>
                                         </div>
@@ -190,7 +213,7 @@
                                         <i class="devicon-css3-plain"></i>
                                         <div class="skill-status">
                                             <span>CSS3</span>
-                                            <div class="status-bar">
+                                            <div class="status-bar" aria-label="100%">
                                                 <div class="status-fill" style="width: 100%;"></div>
                                             </div>
                                         </div>
@@ -198,10 +221,11 @@
                                 </div>
                             </div>
                             <div class="skills-extra">
-                                <i class="devicon-react-plain"></i>
-                                <i class="devicon-git-plain"></i>
-                                <i class="devicon-figma-plain"></i>
-                                <i class="devicon-linux-plain"></i>
+                                <i class="devicon-react-plain" aria-label="React"></i>
+                                <i class="devicon-express-original" aria-label="Express"></i>
+                                <i class="devicon-git-plain" aria-label="Git"></i>
+                                <i class="devicon-figma-plain" aria-label="Figma"></i>
+                                <i class="devicon-linux-plain" aria-label="Linux"></i>
                             </div>
                         </div>
                     </div>
