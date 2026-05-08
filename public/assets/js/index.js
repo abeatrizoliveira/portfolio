@@ -4,7 +4,6 @@ const menu = document.getElementById("menu");
 const scrollTop = document.getElementById("scroll-to-top");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".menu-list a");
-const themeBtn = document.querySelector("[data-theme-toggle]");
 let currentYear = document.getElementById("current-year");
 
 // Evento para o botão de "ir ao topo" aparecer e o menu ficar suspenso.
@@ -59,18 +58,6 @@ const observer = new IntersectionObserver(
 
 sections.forEach((section) => {
   observer.observe(section);
-});
-
-// Evento para o botão mudar o tema
-themeBtn.addEventListener("click", () => {
-  const html = document.querySelector("html");
-  const currentTheme = html.getAttribute("data-theme");
-  const btnTheme = document.querySelector(".btn-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-  const titleTheme = currentTheme === "dark" ? "Modo Claro" : "Modo Escuro";
-  btnTheme.setAttribute("title", titleTheme);
-  html.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
 });
 
 currentYear.innerHTML = new Date().getFullYear();

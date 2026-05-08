@@ -1,0 +1,15 @@
+{
+  "head": {
+    "title": "Beatriz | Desenvolvedora Full Stack"
+  },
+  "banner":{
+    "h1": "Olá, <br>eu sou a <span>Bea</span>! :)",
+    "h2": "Desenvolvedora Full-Stack"
+  },
+  "menu": {
+    "home": "Início",
+    "about": "Sobre",
+    "project": "Projetos",
+    "contact": "Contato"
+	}
+}

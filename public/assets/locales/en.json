@@ -1,0 +1,15 @@
+{
+  "head": {
+    "title": "Beatriz | Full Stack Developer"
+  },
+  "banner":{
+    "h1": "Hello,<br> I'm  <span>Bea</span>! :)",
+    "h2": "Full Stack Developer"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "project": "Projects",
+    "contact": "Contact"
+	}
+}
