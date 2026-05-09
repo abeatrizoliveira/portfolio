@@ -25,6 +25,7 @@ const en = document.getElementById("lang-en");
   const currentLang = document.documentElement.lang;
 
   const newLang = currentLang === "pt" ? "en" : "pt";
+  
  if(newLang === "en"){
         thumb.style.transform = "translateX(26px)";
         en.classList.add("active");

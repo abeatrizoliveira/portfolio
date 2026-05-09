@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/not-found.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/variables.css">
+    <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
     <title>Página não encontrada</title>
 </head>
 
@@ -17,7 +22,12 @@
         </button>
         <nav class="menu" id="menu">
             <div class="menu-spacer">
-                <button type="button" data-theme-toggle class="btn-theme">
+                <button id="language-switcher" class="btn-lang-switch">
+                    <div class="switch-thumb"></div>
+                    <span id="lang-pt" class="spn-lang active">PT</span>
+                    <span id="lang-en" class="spn-lang">EN</span>
+                </button>
+                <button type="button" data-theme-toggle class="btn-theme" title="Modo Claro">
                     <div class="darkmode_icon">
                         <span class="ray"></span>
                         <span class="ray"></span>
@@ -31,10 +41,10 @@
                 </button>
             </div>
             <ul class="menu-list">
-                <li><a href="/#banner-section" id="link-1" class="link1">Início</a></li>
-                <li><a href="/#about-section" id="link-2" class="link1">Sobre</a></li>
-                <li><a href="/#project-section" id="link-3" class="link2">Projetos</a></li>
-                <li><a href="/#contact-section" id="link-4" class="link3">Contato</a></li>
+                <li><a href="/#banner-section" id="link-1" class="link1" data-lang="menu.home">Início</a></li>
+                <li><a href="/#about-section" id="link-2" class="link1" data-lang="menu.about">Sobre</a></li>
+                <li><a href="/#project-section" id="link-3" class="link2" data-lang="menu.project">Projetos</a></li>
+                <li><a href="/#contact-section" id="link-4" class="link3" data-lang="menu.contact">Contato</a></li>
             </ul>
             <div class="menu-icon">
                 <a href="https://www.linkedin.com/in/a-beatrizoliveira" target="_blank">
@@ -55,11 +65,22 @@
         </nav>
     </header>
     <main class="not-found">
-        <h1>Página <span>não</span> encontrada!</h1>
+        <span class="title-404">404</span>
+        <h1 data-lang="not-found.h1">Página <span class="green-text">não</span> encontrada!</h1>
         <a href="/" class="btn-back">Voltar para a página inicial</a>
+         <div class="not-found-end">
+            &copy; <span id="current-year"></span> Desenvolvido por Beatriz Oliveira ─ Todos os direitos reservados
+        </div>
     </main>
+
     <!-- JS customizado -->
     <script src="/assets/js/index.js"></script>
+
+    <!-- JS para tradução -->
+    <script src="/assets/js/translate.js"></script>
+
+    <!-- JS para alterar tema -->
+    <script src="/assets/js/theme.js"></script>
 </body>
 
 </html>

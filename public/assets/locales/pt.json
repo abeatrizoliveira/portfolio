@@ -2,8 +2,8 @@
   "head": {
     "title": "Beatriz | Desenvolvedora Full Stack"
   },
-  "banner":{
-    "h1": "Olá, <br>eu sou a <span>Bea</span>! :)",
+  "banner": {
+    "h1": "Olá, <br>eu sou a <span class=\"green-text\">Beatriz</span>! ",
     "h2": "Desenvolvedora Full-Stack"
   },
   "menu": {
@@ -11,5 +11,17 @@
     "about": "Sobre",
     "project": "Projetos",
     "contact": "Contato"
-	}
+  },
+  "about": {
+    "p1": "<b>Olá!</b> Sou uma desenvolvedora em formação que ama design, lógica e criatividade. Como <b>full stack</b>, sempre tento unir esses três para criar soluções escalonáveis e responsivas."
+  },
+  "contact": {
+    "h1": "Entre em <span class=\"green-text\">contato</span>!"
+  },
+  "footer": {
+    "p": "Você chegou ao fim! :)"
+  },
+  "not-found": {
+    "h1": "Página <span class=\"green-text\">não</span> encontrada!"
+  }
 }

@@ -1,0 +1,7 @@
+/* Texto verde marcado */
+[data-theme="light"] .green-text{
+    color: var(--drk-green);
+}
+[data-theme="dark"] .green-text{
+    color: var(--lgt-green);
+}

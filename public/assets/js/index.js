@@ -18,11 +18,13 @@ window.addEventListener("scroll", () => {
 });
 
 // Evento para ir para o topo da página
-scrollTop.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
+if (scrollTop) {
+  scrollTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+    });
   });
-});
+}
 
 // Evento do menu para telas menores aparecer
 menuTrigger.addEventListener("click", function () {
@@ -42,10 +44,10 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute("id");
         navLinks.forEach((link) => {
-          link.classList.remove("active");
+          link.classList.remove("green-text");
 
           if (link.getAttribute("href") === `#${id}`) {
-            link.classList.add("active");
+            link.classList.add("green-text");
           }
         });
       }

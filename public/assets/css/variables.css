@@ -1,0 +1,31 @@
+/* Configurações padrões */
+:root {
+    --transition: all .5s;
+    --transparent: rgba(255, 255, 255, 0.2);
+    --title-size: 3.125rem;
+    --subtitle-size: 2rem;
+    --txt-size: 1rem;
+    --res-title-size: 1.5rem;
+    --res-subtitle-size: 1rem;
+    --res-txt-size: 0.85rem;
+}
+
+/* Cores para o tema claro */
+[data-theme="light"] {
+    --bg-color: rgb(225, 230, 215);
+    --txt-transparent: #2b2b2bb5;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --txt-color: #2b2b2b;
+    --lgt-green: #9aac78;
+    --drk-green: rgb(111, 136, 66);
+}
+
+/* Cores para o tema escuro */
+[data-theme="dark"] {
+    --bg-color: #2b2b2b;
+    --txt-transparent: rgba(255, 255, 255, 0.6);
+    --shadow-color: rgba(0, 0, 0, 0.712);
+    --txt-color: rgb(225, 230, 215);
+    --lgt-green: rgb(186, 215, 133);
+    --drk-green: #808f64;
+}

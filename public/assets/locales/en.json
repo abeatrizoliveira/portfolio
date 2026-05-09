@@ -2,8 +2,8 @@
   "head": {
     "title": "Beatriz | Full Stack Developer"
   },
-  "banner":{
-    "h1": "Hello,<br> I'm  <span>Bea</span>! :)",
+  "banner": {
+    "h1": "Hello,<br> I'm  <span class=\"green-text\">Beatriz</span>!",
     "h2": "Full Stack Developer"
   },
   "menu": {
@@ -11,5 +11,17 @@
     "about": "About",
     "project": "Projects",
     "contact": "Contact"
-	}
+  },
+  "about": {
+    "p1": "<b>Hello!</b> I'm majoring in Cross-platform Software Development. I consider myself a creative person who loves logical thinking and design. As a <b>full-stack developer</b>, I always try to combine these three aspects to create a scalable and responsive solutions."
+  },
+  "contact": {
+    "h1": "Get in <span class=\"green-text\">Touch</span>!"
+  },
+  "footer": {
+    "p": "Oh! It is the end :)"
+  },
+  "not-found": {
+    "h1": "Page <span class=\"green-text\">not</span> found!"
+  }
 }
