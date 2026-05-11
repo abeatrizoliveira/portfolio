@@ -48,6 +48,37 @@ section h2 {
     align-items: center;
 }
 
+.banner-skills-label {
+    display: flex;
+    gap: 5px;
+}
+
+.banner-skill-label {
+    padding: 5px 10px;
+    background-color: var(--green-transparent);
+    outline-offset: -2px;
+    border-radius: 15px;
+    color: var(--txt-color);
+    box-shadow: 0 0 3px rgba(154, 172, 120, 0.5);
+    transition: 0.2s ease;
+    transition: var(--transition);
+}
+
+[data-theme="light"] .banner-skill-label {
+    border: 3px solid var(--lgt-green);
+    outline: 1px solid var(--drk-green);
+
+}
+
+[data-theme="dark"] .banner-skill-label {
+    border: 3px solid var(--drk-green);
+    outline: 1px solid var(--lgt-green);
+}
+
+.banner-skill-label:hover{
+    transform: translateY(-0.25rem);
+}
+
 /* Sobre */
 
 /* Ajuste no Container Principal */

@@ -13,7 +13,10 @@
     "contact": "Contato"
   },
   "about": {
-    "p1": "<b>Olá!</b> Sou uma desenvolvedora em formação que ama design, lógica e criatividade. Como <b>full stack</b>, sempre tento unir esses três para criar soluções escalonáveis e responsivas."
+    "p1": "<b>Olá!</b> Sou uma desenvolvedora em formação que ama design, lógica e criatividade. Como <b>full stack</b>, sempre tento unir esses três para criar soluções escalonáveis e responsivas.",
+    "skills-title": "Habilidades",
+    "education-title": "Educação",
+    "course-certificate-title": "Cursos e Certificados"
   },
   "contact": {
     "h1": "Entre em <span class=\"green-text\">contato</span>!"

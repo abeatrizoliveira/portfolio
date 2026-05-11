@@ -17,6 +17,7 @@
     --shadow-color: rgba(0, 0, 0, 0.5);
     --txt-color: #2b2b2b;
     --lgt-green: #9aac78;
+    --green-transparent: #9aac7858;
     --drk-green: rgb(111, 136, 66);
 }
 
@@ -28,4 +29,5 @@
     --txt-color: rgb(225, 230, 215);
     --lgt-green: rgb(186, 215, 133);
     --drk-green: #808f64;
+    --green-transparent: rgba(186, 215, 133, 0.36);
 }
