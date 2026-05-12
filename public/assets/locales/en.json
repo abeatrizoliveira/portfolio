@@ -22,7 +22,8 @@
     "h1": "Get in <span class=\"green-text\">Touch</span>!"
   },
   "footer": {
-    "p": "Oh! It is the end :)"
+    "p": "Oh! It is the end :)",
+    "copy": "&copy; 2026 Developed by Beatriz Oliveira ─ All Rights Reserved"
   },
   "not-found": {
     "h1": "Page <span class=\"green-text\">not</span> found!"

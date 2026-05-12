@@ -4,7 +4,7 @@ const menu = document.getElementById("menu");
 const scrollTop = document.getElementById("scroll-to-top");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".menu-list a");
-let currentYear = document.getElementById("current-year");
+
 
 // Evento para o botão de "ir ao topo" aparecer e o menu ficar suspenso.
 window.addEventListener("scroll", () => {
@@ -61,8 +61,6 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => {
   observer.observe(section);
 });
-
-currentYear.innerHTML = new Date().getFullYear();
 
 // Animação de aparecer
 gsap.registerPlugin(ScrollTrigger);

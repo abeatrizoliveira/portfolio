@@ -22,7 +22,8 @@
     "h1": "Entre em <span class=\"green-text\">contato</span>!"
   },
   "footer": {
-    "p": "Você chegou ao fim! :)"
+    "p": "Você chegou ao fim! :)",
+    "copy": "&copy; 2026 Desenvolvido por Beatriz Oliveira ─ Todos os direitos reservados"
   },
   "not-found": {
     "h1": "Página <span class=\"green-text\">não</span> encontrada!"

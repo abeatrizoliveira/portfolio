@@ -37,6 +37,20 @@
     bottom: 20px;
 }
 
+a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition)
+}
+
+.banner-skill-label{
+    cursor: pointer;
+}
+
+a:hover {
+    transform: translateY(-0.25rem);
+}
+
 @media screen and (max-width: 768px) {
     .not-found {
         height: 100%;
