@@ -1,8 +1,8 @@
 const themeBtn = document.querySelector("[data-theme-toggle]");
+var bannerImg = document.querySelector(".banner-img");
 
 // Evento que altera o tema do sistema entre claro e escuro.
 themeBtn.addEventListener("click", () => {
-
   const html = document.querySelector("html");
 
   const currentTheme = html.getAttribute("data-theme");
@@ -16,5 +16,11 @@ themeBtn.addEventListener("click", () => {
   btnTheme.setAttribute("title", titleTheme);
   html.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
-
+  
+  if(currentTheme == "light" ){
+      bannerImg.setAttribute("src", bannerImg.dataset.bannerLight);
+  }else{
+      bannerImg.setAttribute("src", bannerImg.dataset.bannerDark);
+  }
+  console.log(bannerImg);
 });

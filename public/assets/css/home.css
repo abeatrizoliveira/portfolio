@@ -35,14 +35,25 @@
     margin-top: 4rem;
     height: calc(100vh - 4rem);
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0px;
 }
+
+.banner-text{
+    padding: 30px;
+}
+
+.banner-img{
+    width: auto;
+    height: 100%;
+}   
 
 .banner-skills-label {
     display: flex;
     gap: 5px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .banner-skill-label{
@@ -80,11 +91,29 @@
     100% {
         transform: translateY(0rem);
     }
+}   
+
+.banner-btns{
+    display: flex;
+    gap: 15px;
 }
 
-.banner-skill-label:hover {
-    transform: translateY(-0.25rem);
+.banner-btn{
+    margin-top: 30px;
+    text-decoration: none;
+    padding:20px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--bg-transparent);
+    color: var(--bg-color);
+    transition: var(--transition);
 }
+
+.banner-btn:hover{
+    transform: translateY(-0.25rem);
+    background-color: var(--txt-color);
+}
+
 
 /* Sobre */
 
@@ -331,8 +360,15 @@
     height: 16px;
     background-color: var(--bg-color);
     border-radius: 50%;
-    border: 3px solid var(--drk-green);
     z-index: 1;
+}
+
+[data-theme="light"] .timeline-dot{
+    border: 3px solid var(--lgt-green);
+}
+
+[data-theme="dark"] .timeline-dot{
+    border: 3px solid var(--drk-green);
 }
 
 .timeline-dot.course-item {
@@ -356,7 +392,6 @@
 }
 
 .timeline-content .date {
-    font-weight: bold;
     color: var(--txt-color);
     font-size: 1rem;
 }
@@ -414,7 +449,7 @@
 
 
 .card-list .card-link .card-title {
-    color: #000;
+    color: var(--bg-color);
     font-size: 1.19rem;
     font-weight: 600;
 }
@@ -441,6 +476,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    height: calc(100vh - 100px);
 }
 
 .info-contact {
@@ -482,8 +518,56 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .banner{
+        flex-wrap: wrap;
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+        height: 100dvh;
+    }
+
+    .banner-text{
+        margin-top: 15px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .banner-skills-label{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    @keyframes up-down {
+    0% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(-0.25rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+    }
+}   
+
+    .banner-img{
+        height: 40%;
+        order: -1;
+    }    
+
+    .banner-btns{
+        width: 100%;
+        justify-content: center;
+    }
+
     section h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: var(--txt-color);
     }
 
@@ -539,6 +623,16 @@
 
     .about-info h2 {
         text-align: center;
+    }
+
+    .timeline-item.course-item{
+        flex-wrap: wrap;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .course-icon{
+        margin: auto;
     }
 
     /* Contato */

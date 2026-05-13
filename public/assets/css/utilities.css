@@ -16,7 +16,8 @@
     box-shadow: 0 0 3px rgba(154, 172, 120, 0.5);
     transition: 0.2s ease;
     transition: var(--transition);
-    animation: up-down 1s;
+    animation: up-down 1.5s infinite;
+    animation-timing-function: ease-in-out;
 }
 
 [data-theme="light"] .banner-skill-label {

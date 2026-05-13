@@ -2,6 +2,7 @@
 const menuTrigger = document.getElementById("menu-trigger");
 const menu = document.getElementById("menu");
 const scrollTop = document.getElementById("scroll-to-top");
+const linkToTop = document.getElementById("link-1");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".menu-list a");
 
@@ -20,6 +21,14 @@ window.addEventListener("scroll", () => {
 // Evento para ir para o topo da página
 if (scrollTop) {
   scrollTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+    });
+  });
+}
+
+if (linkToTop) {
+  linkToTop.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
     });
