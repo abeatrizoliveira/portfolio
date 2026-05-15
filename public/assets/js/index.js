@@ -5,7 +5,6 @@ const scrollTop = document.getElementById("scroll-to-top");
 const linkToTop = document.getElementById("link-1");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".menu-list a");
-let siteTheme = document.documentElement.getAttribute("data-theme");
 const imageBanner = document.querySelector(".banner-img");
 
 // Evento para o botão de "ir ao topo" aparecer e o menu ficar suspenso.
@@ -166,52 +165,4 @@ bannerModalTrigger.addEventListener("click", function () {
 
 closeModalBtn.addEventListener("click", function () {
   bannerModal.classList.remove("active");
-});
-
-// Função para animação
-let animationInterval;
-
-const darkFrames = [
-  "../assets/img/frame1-d.png",
-  "../assets/img/frame2-d.png",
-  "../assets/img/frame3-d.png",
-];
-
-const lightFrames = [
-  "../assets/img/frame1-l.png",
-  "../assets/img/frame2-l.png",
-  "../assets/img/frame3-l.png",
-];
-
-imageBanner.addEventListener("mouseenter", (event) => {
-  if (siteTheme === "dark") {
-    const frames = siteTheme === "dark" ? darkFrames : lightFrames;
-
-    let currentFrame = 0;
-
-    clearInterval(animationInterval);
-
-    animationInterval = setInterval(() => {
-      imageBanner.src = frames[currentFrame];
-
-      currentFrame++;
-
-      if (currentFrame >= frames.length) {
-        currentFrame = 0;
-      }
-    }, 150);
-  } else {
-    imageBanner.setAttribute();
-  }
-});
-
-imageBanner.addEventListener("mouseleave", () => {
-
-  clearInterval(animationInterval);
-  const siteTheme =
-    document.documentElement.getAttribute("data-theme");
-  imageBanner.src =
-    siteTheme === "dark"
-      ? darkFrames[1]
-      : lightFrames[1];
 });

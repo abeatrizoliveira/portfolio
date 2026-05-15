@@ -9,11 +9,59 @@ ALTERA SPRITE
 */
 function updateBanner(theme) {
   if (theme === "dark") {
-    bannerImg.setAttribute("src",`${bannerImg.dataset.bannerDark}`);
-
+    bannerImg.setAttribute("src", `${bannerImg.dataset.bannerDark}`);
   } else {
-      bannerImg.setAttribute("src",`${bannerImg.dataset.bannerLight}`);
+    bannerImg.setAttribute("src", `${bannerImg.dataset.bannerLight}`);
   }
+}
+
+/*
+-=-=-=-=-=-=-=-
+ALTERA AIMAÇÃO  
+-=-=-=-=-=-=-=-
+*/
+
+// Função para animação
+function updateAnimation(theme) {
+  let animationInterval;
+
+  const darkFrames = [
+    "../assets/img/cartoon-pic-d-0.png",
+    "../assets/img/cartoon-pic-d-1.png",
+    "../assets/img/cartoon-pic-d-2.png",
+    "../assets/img/cartoon-pic-d-3.png",
+  ];
+
+  const lightFrames = [
+    "../assets/img/cartoon-pic-l-0.png",
+    "../assets/img/cartoon-pic-l-1.png",
+    "../assets/img/cartoon-pic-l-2.png",
+    "../assets/img/cartoon-pic-l-3.png",
+  ];
+
+  bannerImg.addEventListener("mouseenter", (event) => {
+    const frames = theme === "dark" ? darkFrames : lightFrames;
+
+    let currentFrame = 0;
+
+    clearInterval(animationInterval);
+
+    animationInterval = setInterval(() => {
+      bannerImg.src = frames[currentFrame];
+
+      currentFrame++;
+
+      if (currentFrame >= frames.length) {
+        currentFrame = 0;
+      }
+    }, 140);
+  });
+
+  bannerImg.addEventListener("mouseleave", () => {
+    clearInterval(animationInterval);
+    const theme = document.documentElement.getAttribute("data-theme");
+    bannerImg.src = theme === "dark" ? darkFrames[2] : lightFrames[2];
+  });
 }
 
 /* 
@@ -27,6 +75,7 @@ function setTheme(theme) {
   localStorage.setItem("theme", theme);
 
   updateBanner(theme);
+  updateAnimation(theme);
 }
 
 /*
