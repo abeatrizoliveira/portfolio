@@ -301,6 +301,17 @@
 
 
 /* Responsividade do menu (navbar) */
+@media screen and (max-width: 1024px) {
+    .menu.float{
+        width: 70%;
+    }
+    .menu-list{
+        gap: 15px;
+    }
+    .menu-spacer{
+        gap: 15px;
+    }
+}
 @media screen and (max-width: 768px) {
     .menu {
         position: fixed;

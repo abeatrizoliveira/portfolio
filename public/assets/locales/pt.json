@@ -4,7 +4,9 @@
   },
   "banner": {
     "h1": "Olá, <br>eu sou a <span class=\"green-text\">Beatriz</span>! ",
-    "h2": "Desenvolvedora Full-Stack"
+    "h2": "Desenvolvedora Full-Stack",
+    "btn1": "Conheça me",
+    "btn2": "Vamos conversar?"
   },
   "menu": {
     "home": "Início",
