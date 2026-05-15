@@ -106,36 +106,6 @@ handleWidthChange(mql);
 // continua ouvindo mudanças
 mql.addEventListener("change", handleWidthChange);
 
-// Swiper JS para carrossel
-new Swiper(".card-wrapper", {
-  loop: true,
-  spaceBetween: 30,
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // Responsive breakpoints
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
 
 // função para o aria-label seguir o mouse
 const skills = document.querySelectorAll(".skill");
@@ -165,4 +135,38 @@ bannerModalTrigger.addEventListener("click", function () {
 
 closeModalBtn.addEventListener("click", function () {
   bannerModal.classList.remove("active");
+});
+
+const copyEmail = document.getElementById("copy-email");
+const email = document.getElementById("email-contact");
+
+copyEmail.addEventListener("click", function () {
+  navigator.clipboard.writeText(email.textContent).then(() => {
+    copyEmail.innerText = "Copiado!";
+
+    setTimeout(() => {
+      copyEmail.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-copy" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+          d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+      </svg>`;
+    }, 1500);
+  });
+});
+
+const copyNumber = document.getElementById("copy-number");
+const number = document.getElementById("number-contact");
+
+copyNumber.addEventListener("click", function () {
+  navigator.clipboard.writeText(number.textContent).then(() => {
+    copyNumber.innerText = "Copiado!";
+
+    setTimeout(() => {
+      copyNumber.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-copy" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+          d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+      </svg>`;
+    }, 1500);
+  });
 });
