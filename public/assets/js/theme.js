@@ -1,6 +1,7 @@
 const themeBtn = document.querySelector("[data-theme-toggle]");
 var bannerImg = document.querySelector(".banner-img");
 const html = document.querySelector("html");
+const hCaptcha = document.getElementById("h-captcha");
 
 /* 
 -=-=-=-=-=-=-
@@ -64,6 +65,14 @@ function updateAnimation(theme) {
   });
 }
 
+function updateCaptcha(theme) {
+  if (theme === "dark") {
+    hCaptcha.setAttribute("data-theme", theme);
+  } else {
+    hCaptcha.setAttribute("data-theme", theme);
+  }
+}
+
 /* 
 -=-=-=-=-=-
 DEFINE TEMA
@@ -76,6 +85,7 @@ function setTheme(theme) {
 
   updateBanner(theme);
   updateAnimation(theme);
+  updateCaptcha(theme);
 }
 
 /*
