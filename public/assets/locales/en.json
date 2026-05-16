@@ -18,14 +18,30 @@
     "p1": "<b>Hello!</b> I'm majoring in Cross-platform Software Development. I consider myself a creative person who loves logical thinking and design. As a <b>full-stack developer</b>, I always try to combine these three aspects to create a scalable and responsive solutions.",
     "skills-title": "Skills",
     "education-title": "Education",
-    "course-certificate-title": "Courses and Certificates"
+    "education-date1": "2026 - Today",
+    "education-description1": "<b>Associate Degree in Cross-platform Software Development</b>",
+    "education-description2": "<b>Technical Degree in Systems Development</b>",
+    "course-certificate-title": "Courses and Certificates",
+    "course-title2": "<b>TOEIC Brazil</b> ─ Listening and Reading",
+    "course-desscription1": "Course focused on hardware and software fundamentals, computer maintenance, and basic concepts of networking and technical support.",
+    "course-desscription2": "English certification assessing listening and reading comprehension for everyday situations and professional environments."
   },
   "contact": {
-    "h1": "Get in <span class=\"green-text\">Touch</span>!"
+    "h1": "Get in <span class=\"green-text\">Touch</span>!",
+    "p1": "Did you like my work?<br>I'm avaliable for opportunities, freelances and networking.<br>Feel free to get in touch!",
+    "label1": "Name",
+    "label2": "Phone",
+    "label3": "Subject",
+    "label4": "Message",
+    "btn": "Send message"
   },
   "footer": {
     "p": "Oh! It is the end :)",
     "copy": "&copy; 2026 Developed by Beatriz Oliveira ─ All Rights Reserved"
+  },
+  "modal": {
+    "title": "Let's Talk?",
+    "subtitle": "Choose the best way to talk to me."
   },
   "not-found": {
     "h1": "Page <span class=\"green-text\">not</span> found!"

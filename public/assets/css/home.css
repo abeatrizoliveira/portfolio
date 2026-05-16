@@ -514,7 +514,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 25px);
+    height: 100vh;
 }
 
 .info-contact,
@@ -806,20 +806,34 @@
     /* Contato */
     .contact-section {
         flex-wrap: wrap;
+        height: 100%;
     }
 
-    .form-contact {
-        width: 80%;
+    .form-contact{
+        width: 100%;
+        justify-content: center;
     }
 
-    .card-wrapper {
-        margin: 0px 10px 25px;
+    .card-for-contact{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    .card-wrapper .swiper-slide-button {
-        display: none;
+    .division{
+        flex-wrap: wrap;
     }
 
+
+    /* Modal */
+    .modal-content{
+        width: 300px;
+    }
+
+    .modal-item{
+        padding-left: 0px;
+        justify-content: center;
+    }
 }
 
 .h-captcha {
