@@ -216,49 +216,15 @@
     height: 100%;
 }
 
-
 .about-section .container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 40px;
     border-radius: 30px;
     padding: 50px;
     border: 2px solid var(--txt-color);
 }
 
-/* 
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    width: 100%;
-    position: relative;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.arrow-img {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 10%;
-}
-
-.line {
-    stroke: var(--bg-color);
-}
-
-.arrow-head {
-    fill: var(--bg-color);
-
-}
-
-.about-text .name {
-    font-size: 2.5rem;
-} */
 
 .about-me {
     display: flex;
@@ -294,7 +260,6 @@
     background: linear-gradient(to right, var(--green-transparent), rgba(255, 255, 255, 0));
 }
 
-
 .about-me-img .profile-img-background {
     width: 275px;
     height: 275px;
@@ -326,19 +291,20 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    margin-top: 30px;
 }
 
-
-.about-tech-education{
+.about-tech-education {
     flex: 1;
     height: 100%;
-} 
-.about-tech-skills{
+}
+
+.about-tech-skills {
     flex: 2;
     height: 100%;
 }
 
-.about-tech-education{
+.about-tech-education {
     align-self: flex-start;
 }
 
@@ -350,15 +316,23 @@
 }
 
 .skills-extra i {
-    color: var(--drk-green);
     font-size: 2rem;
 }
+
+[data-theme="light"] .skills-extra i {
+    color: var(--drk-green);
+}
+
+[data-theme="dark"] .skills-extra i {
+    color: var(--lgt-green);
+}
+
 
 .skills {
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .skill {
@@ -368,7 +342,14 @@
 
 .skill i {
     font-size: 2rem;
+}
+
+[data-theme="light"] .skill i {
     color: var(--drk-green);
+}
+
+[data-theme="dark"] .skill i {
+    color: var(--lgt-green);
 }
 
 .skills-status {
@@ -376,6 +357,10 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
+
+.skills-status span {
+    color: var(--txt-color);
 }
 
 .about-section [aria-label] {
@@ -440,7 +425,7 @@
 /* Data */
 .timeline-date {
     color: var(--txt-color);
-    font-size: var(--res-txt-size);
+    font-size: var(--txt-size);
     text-align: right;
     width: 100%;
 }
@@ -462,11 +447,11 @@
     border-radius: 10px;
 }
 
-[data-theme="light"] .timeline-marker::after{
+[data-theme="light"] .timeline-marker::after {
     background: var(--transparent);
 }
 
-[data-theme="dark"] .timeline-marker::after{
+[data-theme="dark"] .timeline-marker::after {
     background: var(--transparent);
 }
 
@@ -480,11 +465,11 @@
 }
 
 [data-theme="light"] .timeline-dot {
-    background-color: var(--lgt-green);
+    background-color: var(--drk-green);
 }
 
 [data-theme="dark"] .timeline-dot {
-    background-color: var(--drk-green);
+    background-color: var(--lgt-green);
 }
 
 /* Conteúdo */
@@ -496,6 +481,186 @@
 .timeline-content p {
     margin: 5px 0 0;
     color: var(--txt-color);
+}
+
+.timeline-content .content-title {
+    color: var(--txt-color);
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.container-extra {
+    display: flex;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+.certificate-item {
+    margin-top: 30px;
+    align-items: center;
+    color: var(--txt-color);
+}
+
+.certificate-text {
+    margin-top: 5px;
+    text-align: justify;
+}
+
+.certificate-title {
+    font-size: 1.15rem;
+    font-weight: 500;
+    transition: var(--transition);
+    display: block;
+}
+
+[data-theme="light"] .certificate-title {
+    color: var(--drk-green);
+}
+
+[data-theme="dark"] .certificate-title {
+    color: var(--lgt-green);
+}
+
+.certificate-title a {
+    color: var(--txt-color);
+    text-decoration: none;
+}
+
+.about-experience {
+    flex: 2;
+}
+
+.about-certificates {
+    flex: 1;
+}
+
+.experience-items {
+    margin-top: 30px;
+    color: var(--txt-color);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    gap: 30px;
+}
+
+.experience-item {
+    border: 2px solid var(--txt-color);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.experience-item svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+[data-theme="light"] .experience-item svg {
+    color: var(--drk-green);
+}
+
+[data-theme="dark"] .experience-item svg {
+    color: var(--lgt-green);
+}
+
+
+.experience-item .experience-item-texts {
+    margin-top: 15px;
+}
+
+.experience-item span {
+    font-weight: 500;
+    font-size: 1.15rem;
+}
+
+.experience-item ul {
+    list-style-position: inside;
+    line-height: 25px;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.experience-item li::marker {
+    color: var(--drk-green);
+}
+
+.experience-item .experience-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.experience-item .date {
+    padding: 2px 8px;
+    border-radius: 15px;
+    color: var(--txt-color);
+    font-weight: 400;
+    font-size: var(--res-txt-size);
+    border: 2px solid var(--txt-color);
+}
+
+.experience-item .date.inactive {
+    border: 2px solid var(--txt-transparent);
+}
+
+/* PROJETOS */
+
+.project-container {
+    margin-top: 30px;
+}
+
+.project-section-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-section-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.project-section-btns a {
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background-color: var(--bg-transparent);
+    color: var(--bg-color);
+    transition: var(--transition);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.project-section-start a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.project-section-start a:hover {
+    transform: translateY(-0.25rem);
+}
+
+.project-card{
+    padding: 15px;
+    background-color: var(--bg-color);
+    border:  2px solid var(--txt-color);
+    border-radius: 15px;
+    width: 400px;
+}
+
+.project-card img{
+    width: 100%;
+    border:  2px solid var(--txt-color);
+    border-radius: 15px;
+}
+
+.project-card-texts .title{
+    font-size: 1.25rem;
+    color: var(--txt-color);
+    font-weight: 500;
 }
 
 /* Contato */
@@ -772,6 +937,7 @@
 
     .about-me-text p:nth-child(2) {
         margin-top: 15px;
+        font-size: 1.15rem;
 
     }
 
@@ -816,6 +982,20 @@
 
     .course-icon {
         margin: auto;
+    }
+
+    .container-extra {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .experience-title {
+        flex-wrap: wrap;
+    }
+
+    .experience-item-texts li {
+        margin-top: 10px;
+        text-align: left;
     }
 
     /* Contato */
