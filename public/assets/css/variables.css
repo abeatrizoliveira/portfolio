@@ -15,6 +15,7 @@
     --bg-color: #e1e6d7;
     --bg-transparent: #2b2b2bd0;
     --txt-transparent: #2b2b2bb5;
+    --transparent: #2b2b2b33;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --txt-color: #2b2b2b;
     --lgt-green: #9aac78;
@@ -27,6 +28,7 @@
     --bg-color: #2b2b2b;
     --bg-transparent: #e1e6d7e1;
     --txt-transparent: rgba(255, 255, 255, 0.6);
+    --transparent: #e1e6d733;
     --shadow-color: rgba(0, 0, 0, 0.712);
     --txt-color: rgb(225, 230, 215);
     --lgt-green: rgb(186, 215, 133);

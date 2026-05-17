@@ -90,21 +90,6 @@ gsap.utils.toArray(".box").forEach((box) => {
   );
 });
 
-// Função para seta diminuir
-const mql = window.matchMedia("(max-width: 768px)");
-
-function handleWidthChange(e) {
-  if (e.matches) {
-    const line = document.querySelector(".line");
-    line.setAttribute("d", "M 100 150 Q 70 50 150 50");
-  }
-}
-
-// roda ao carregar
-handleWidthChange(mql);
-
-// continua ouvindo mudanças
-mql.addEventListener("change", handleWidthChange);
 
 
 // função para o aria-label seguir o mouse

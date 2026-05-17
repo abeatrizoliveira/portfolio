@@ -334,6 +334,10 @@
         align-items: center;
     }
 
+    .btn-lang-switch{
+        height: 32px;
+    }
+
     .menu.active {
         right: 0;
     }
