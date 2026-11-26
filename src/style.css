@@ -1,38 +1,63 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-    --color-bg-dark: #2b2b2b;
-    --color-bg: #e1e6d7;
+  --color-bg-dark: #2b2b2b;
+  --color-bg: #e1e6d7;
+  --color-txt-transparent: #2b2b2bb5;
+  --color-txt-transparent-dark: rgba(255, 255, 255, 0.6);
+
+  --color-fresh-green: rgb(186, 215, 133);
+
+  --color-sage-green: #9aac78;
+  --color-olive-green: #6f8842;
+  --color-moss-green: #808f64;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@layer components {
+  .nav-link {
+    @apply text-txt-transparent hover:text-bg-dark dark:text-txt-transparent-dark dark:hover:text-bg relative pb-1 transition-colors duration-500;
 
-[data-theme="light"] {
-    --bg-color: #e1e6d7;
-    --bg-transparent: #2b2b2bd0;
-    --txt-transparent: #2b2b2bb5;
-    --transparent: #2b2b2b33;
-    --shadow-color: rgba(0, 0, 0, 0.5);
-    --txt-color: #2b2b2b;
-    --drk-txt-color: #090909;
-    --lgt-green: #9aac78;
-    --green-transparent: #9aac7892;
-    --drk-green: #6f8842;
-    --darker-green: #6c7757;
+    @apply after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:transition-[width] after:duration-350 after:ease-out;
+
+    @apply after:bg-bg-dark dark:after:bg-bg;
+
+    @apply hover:after:w-full;
+  }
+}
+
+@layer base {
+  * {
+    @apply transition-colors duration-500;
+  }
+}
+
+[data-theme='light'] {
+  --bg-color: #e1e6d7;
+  --bg-transparent: #2b2b2bd0;
+  --txt-transparent: #2b2b2bb5;
+  --transparent: #2b2b2b33;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --txt-color: #2b2b2b;
+  --drk-txt-color: #090909;
+  --lgt-green: #9aac78;
+  --green-transparent: #9aac7892;
+  --drk-green: #6f8842;
+  --darker-green: #6c7757;
 }
 
 /* Cores para o tema escuro */
-[data-theme="dark"] {
-    --bg-color: #2b2b2b;
-    --bg-transparent: #e1e6d7e1;
-    --txt-transparent: rgba(255, 255, 255, 0.6);
-    --transparent: #e1e6d733;
-    --shadow-color: rgba(0, 0, 0, 0.712);
-    --txt-color: #e1e6d7;
-    --drk-txt-color: #959a8a;
-    --lgt-green: rgb(186, 215, 133);
-    --drk-green: #808f64;
-    --darker-green: #505840;
-    --green-transparent: rgba(186, 215, 133, 0.36);
+[data-theme='dark'] {
+  --bg-color: #2b2b2b;
+  --bg-transparent: #e1e6d7e1;
+  --txt-transparent: rgba(255, 255, 255, 0.6);
+  --transparent: #e1e6d733;
+  --shadow-color: rgba(0, 0, 0, 0.712);
+  --txt-color: #e1e6d7;
+  --drk-txt-color: #959a8a;
+  --lgt-green: rgb(186, 215, 133);
+  --drk-green: #808f64;
+  --darker-green: #505840;
+  --green-transparent: rgba(186, 215, 133, 0.36);
 }
